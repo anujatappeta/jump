@@ -179,7 +179,7 @@ class SolitaireMain:
     def __init__(self, width=1200,height=825):
         self.width = width
         self.height = height
-
+        
         self.actual_level = 0
 
     def change_sound(self, sound):
@@ -640,6 +640,7 @@ class SolitaireMain:
         self.load_things()
 
         self.background = pygame.image.load("data/Background2.png")
+        self.background = pygame.transform.scale(self.background, (self.width, self.height))
         self.play_var=0
         self.help_var=0
         self.play_sound=False
